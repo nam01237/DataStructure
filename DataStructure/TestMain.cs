@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataStructure.HashTable;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,41 @@ namespace DataStructure
     {
         static void Main(string[] args)
         {
-            BTreeTest();
+            //BTreeTest();
+            HashTableTest();
+        }
+
+        public static void HashTableTest()
+        {
+            CHashTable<int, string> hashTable = new CHashTable<int, string>(10);
+            hashTable.Insert(16, "야구");
+            hashTable.Insert(26, "농구");
+            hashTable.Insert(12, "축구");
+
+            Console.WriteLine(hashTable.GetValue(16));
+            Console.WriteLine(hashTable.GetValue(26));
+            Console.WriteLine(hashTable.GetValue(12));
+            Console.WriteLine(hashTable.GetValue(15));
+
+            CHashTable<Foo, int> hashTable2 = new CHashTable<Foo, int>(14);
+
+            Foo key1 = new Foo();
+            key1.a = 1;
+            Foo key2 = new Foo();
+            key2.a = 4;
+
+            hashTable2.Insert(key1, 11);
+            hashTable2.Insert(key1, 14);
+            hashTable2.Insert(key2, 24);
+
+            Console.WriteLine(hashTable2.GetValue(key1));
+            Console.WriteLine(hashTable2.GetValue(key2));
+
+            hashTable2.Remove(key2);
+
+            Console.WriteLine(hashTable2.GetValue(key2));
+
+            hashTable.TestShow();
         }
 
         public static void BTreeTest()
@@ -44,5 +79,10 @@ namespace DataStructure
             }
 
         }
+    }
+
+    public class Foo
+    {
+        public int a;
     }
 }
