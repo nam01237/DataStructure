@@ -13,6 +13,25 @@ namespace TestMain
             //TestFactoryMethod();
             //TestAbstractFactory();
             //TestDecorator();
+            //TestStrategy();
+        }
+
+        static void TestStrategy()
+        {
+            Dragon infrnal = new InfernalDragon();
+            Dragon snow = new SnowDragon();
+            Dragon dragon = new Dragon();
+
+            infrnal.Breath();
+            infrnal.Move();
+            snow.Breath();
+            snow.Move();
+
+            dragon.Breather = new FireBreath();
+            dragon.Moveable = new MoveCrepp();
+
+            dragon.Breath();
+            dragon.Move();
         }
 
         static void TestDecorator()

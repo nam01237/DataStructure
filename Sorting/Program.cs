@@ -10,7 +10,7 @@ namespace Sorting
     {
         static void Main(string[] args)
         {
-            int[] bubble = { 4, 8, 1, 11, 5 };
+            int[] bubble = { 4, 8, 1, 11, 5, 3, 2, 10 };
             Sort.BubbbleSort(bubble);
 
             foreach (var item in bubble)
@@ -19,7 +19,7 @@ namespace Sorting
             }
             Console.WriteLine();
 
-            int[] selection = { 4, 8, 1, 11, 5 };
+            int[] selection = { 4, 8, 1, 11, 5, 3, 2, 10 };
             Sort.SelectionSort(selection);
 
             foreach (var item in selection)
@@ -28,10 +28,19 @@ namespace Sorting
             }
             Console.WriteLine();
 
-            int[] insert = { 4, 8, 1, 11, 5 };
+            int[] insert = { 4, 8, 1, 11, 5, 3, 2, 10 };
             Sort.InsertSort(insert);
 
             foreach (var item in insert)
+            {
+                Console.Write($"{item} ");
+            }
+            Console.WriteLine();
+
+            int[] merge = { 4, 8, 1, 11, 5, 3, 2, 10 };
+            MergeSort.Sort(merge, 0, merge.Length - 1);
+
+            foreach (var item in merge)
             {
                 Console.Write($"{item} ");
             }
