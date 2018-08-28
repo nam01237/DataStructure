@@ -45,6 +45,15 @@ namespace Sorting
                 Console.Write($"{item} ");
             }
             Console.WriteLine();
+
+            int[] quick = { 8, 8, 8, 4, 11, 9, 3};
+            QuickSort.Sort(quick, 0, quick.Length - 1);
+
+            foreach (var item in quick)
+            {
+                Console.Write($"{item} ");
+            }
+            Console.WriteLine();
         }
     }
 }

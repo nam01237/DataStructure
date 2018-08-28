@@ -14,6 +14,19 @@ namespace TestMain
             //TestAbstractFactory();
             //TestDecorator();
             //TestStrategy();
+            TestObserver();
+        }
+
+        static void TestObserver()
+        {
+            BaseballScore baseballScore = new BaseballScore();
+
+            Platform tv = new Platform("TV", baseballScore);
+            Platform mobile = new Platform("모바일", baseballScore);
+            Platform web = new Platform("웹", baseballScore);
+
+            baseballScore.AwayScore = 1;
+            baseballScore.HomeScore = 3;
         }
 
         static void TestStrategy()
