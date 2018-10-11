@@ -45,9 +45,9 @@
     <Compile Include="AbstractFactory\CellPhonePart.cs" />
     <Compile Include="AbstractFactory\CellPhonePartsFactory.cs" />
     <Compile Include="AbstractFactory\Cpu.cs" />
-    <Compile Include="BaseballScore.cs" />
-    <Compile Include="Platform.cs" />
-    <Compile Include="ScoreBoard.cs" />
+    <Compile Include="Observer\BaseballScore.cs" />
+    <Compile Include="Observer\Platform.cs" />
+    <Compile Include="Observer\ScoreBoard.cs" />
     <Compile Include="StrategyPattern\FireBreath.cs" />
     <Compile Include="StrategyPattern\IceBreath.cs" />
     <Compile Include="StrategyPattern\IMoveable.cs" />

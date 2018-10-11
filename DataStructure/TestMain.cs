@@ -1,4 +1,5 @@
-﻿using DataStructure.HashTable;
+﻿using DataStructure.BinaryTree2;
+using DataStructure.HashTable;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,38 @@ namespace DataStructure
         static void Main(string[] args)
         {
             //BTreeTest();
-            HashTableTest();
+            //HashTableTest();
+            BTreeTest2();
+        }
+
+        public static void BTreeTest2()
+        {
+            PBinaryTree<int> btree = new PBinaryTree<int>(7, Compare);
+
+            btree.Insert(1);
+            btree.Insert(5);
+            btree.Insert(6);
+            btree.Insert(4);
+            btree.Insert(8);
+            btree.Insert(10);
+            btree.Insert(13);
+
+            btree.Show();
+
+            Console.WriteLine();
+
+            btree.Delete(13);
+            btree.Delete(6);
+
+            btree.Show();
+        }
+
+        public static bool Compare(int a, int b)
+        {
+            if (a > b)
+                return true;
+            else
+                return false;
         }
 
         public static void HashTableTest()

@@ -42,6 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BinaryTree\BNode.cs" />
+    <Compile Include="BinaryTree\PBinaryTree.cs" />
     <Compile Include="HashTable\CHashTable.cs" />
     <Compile Include="TestMain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

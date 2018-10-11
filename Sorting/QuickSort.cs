@@ -37,7 +37,7 @@ namespace Sorting
                     end--;
 
                 Swap(ref arr[start], ref arr[end]);
-
+                
                 if (end == pi)
                 {
                     pi = start;
@@ -45,9 +45,10 @@ namespace Sorting
                 }
                 if (start == pi)
                     pi = end;
+                
             }
 
-            return start;
+            return end;
         }
 
         private static void Swap(ref int x, ref int y)
